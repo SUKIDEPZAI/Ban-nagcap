@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: discord-ai-bot
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: MOTAPIS_API_KEY
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: AI_BASE_URL
+        value: https://motapis.com/v1
+      - key: AI_MODEL
+        value: DeepSeek-V4-Flash-0731
+      - key: BOT_NAME
+        value: Bot Mất Dạy
+      - key: BOT_NAMES
+        value: bot
